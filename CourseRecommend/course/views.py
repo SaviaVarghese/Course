@@ -10,12 +10,12 @@ import joblib
 
 # Load the dataset and pre-trained model
 
-course_similarity_matrix_train = joblib.load('C:\\Users\\Galaxy\\PycharmProjects\\pythonProject\\CourseRecommend\\NoteBook\\course_recommendation')
+course_similarity_matrix_train = joblib.load("/home/ubuntu/Course/CourseRecommend/NoteBook/coursea_data.csv")
 ## Update the column names in text_attributes
 text_attributes = ['course_organization', 'course_Certificate_type', 'course_difficulty']
 
 # Load the dataset and pre-trained model
-data = pd.read_csv("C:\\Users\Galaxy\\PycharmProjects\\pythonProject\\CourseRecommend\\NoteBook\\coursea_data.csv")
+data = pd.read_csv("/home/ubuntu/Course/CourseRecommend/NoteBook/coursea_data.csv")
 
 # Combine relevant text-based attributes into a single column for TF-IDF
 data['course_text'] = data[text_attributes].apply(lambda x: ' '.join(x), axis=1)
